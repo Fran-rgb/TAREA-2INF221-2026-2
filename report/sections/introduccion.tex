@@ -1,0 +1,13 @@
+Este reporte estudia el problema de hallar un camino 
+de máximo puntaje en una grilla de $N \times M$ celdas, 
+desde $(0,0)$ hasta $(N-1,M-1)$, moviéndose solo hacia 
+abajo o a la derecha. Las celdas pueden ser libres 
+(suman un valor), muros o minas 
+(restan una penalización p y una vida); el camino es 
+válido si llega a la meta con al menos una vida. 
+Se implementaron tres algoritmos: fuerza bruta con 
+backtracking, programación dinámica con estado 
+(celda, minas pisadas) y un greedy que avanza hacia 
+el vecino de mayor ganancia inmediata. El objetivo es 
+contrastar su tiempo, memoria y calidad de solución con 
+su complejidad teórica.

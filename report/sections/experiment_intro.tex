@@ -1,0 +1,33 @@
+Los experimentos fueron ejecutados en un entorno Linux
+sobre WSL (Windows Subsystem for Linux), utilizando un
+procesador AMD Ryzen 3 7320U with Radeon Graphics (2.40 GHz),
+Sistema operativo de 64 bits, procesador x64 y 8 GB de memoria
+RAM. Los programas principales fueron implementados en C++17
+y compilados con \texttt{g++} utilizando el nivel de
+optimización predeterminado vía \texttt{Makefile}. 
+
+\vspace{0.4cm}
+
+La medición de tiempo se realizó con la librería estándar
+\texttt{<chrono>} (\texttt{high\_resolution\_clock}),
+mientras que el consumo de memoria \textit{Peak RSS} se
+registró mediante la función \texttt{getrusage()} de la
+cabecera POSIX \texttt{<sys/resource.h>}. 
+
+\vspace{0.4cm}
+
+Cada medición corre en un proceso independiente para que 
+el pico no se arrastre entre algoritmos. El conjunto de 
+pruebas son 288 instancias generadas con un script de python 
+con tamaños $n \in \{4, 8, 16, 64, 256, 1024\}$, 
+$m \in \{n, 2n\}$, cuatro terrenos (libre, murallas, minas, mixta), 
+dos dominios (D10, D1000) y tres semillas. La fuerza bruta 
+solo se ejecutó con $N+M \le 32$. Cada punto de las Figuras 3 y 4 
+promedia sobre dominios y semillas; en las Figuras 1 y 2 cada 
+punto promedia solo las 3 semillas de un dominio. 
+
+\vspace{0.4cm}
+
+Las visualizaciones graficas fueron generadas mediante
+scripts de Python usando las libreria \texttt{pandas} y
+\texttt{seaborn}.

@@ -1,0 +1,14 @@
+A partir de los resultados obtenidos, se concluye que la 
+fuerza bruta es inviable más allá de dimensiones de 
+aproximadamente $16 \times 16$: 
+ya que toma segundos con 256 celdas y su tiempo se multiplica 
+por aproximadamente $600$ al duplicar el tamaño. 
+La programación dinámica entrega el óptimo hasta aproximadamente$2 \cdot 10^{6}$ 
+celdas en aproximadamente $0{,}6$ s, pero usando aproximadamente $230$ MB. 
+Greedy es unas $2000$ veces más rápido que DP y casi no usa memoria, pero no 
+garantiza el óptimo: su brecha crece linealmente (aproximadamente proporcional a $n+m$)
+y falla hasta en el $67\%$ de las instancias con murallas, 
+mientras que en 
+terrenos libres o con minas casi nunca falla. La mejor elección es, 
+por todo lo visto, un compromiso entre garantía de optimalidad, 
+memoria y tiempo.
