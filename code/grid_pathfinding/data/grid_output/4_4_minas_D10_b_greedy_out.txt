@@ -1,4 +1,4 @@
 1
-18
-DRDRRD
-3
+-3
+RDDDRR
+2

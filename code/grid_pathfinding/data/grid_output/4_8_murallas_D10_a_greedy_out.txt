@@ -1,4 +1,4 @@
-1
-25
-RDDDRRRRRR
+0
+-4
+DRDRD
 3
